@@ -3,10 +3,15 @@
     <words>
       <w>arbol</w>
       <w>binario</w>
+      <w>eliminar</w>
+      <w>encontrar</w>
+      <w>insertar</w>
       <w>izquierdo</w>
       <w>nodo</w>
       <w>orden</w>
+      <w>raiz</w>
       <w>recursico</w>
+      <w>resultado</w>
     </words>
   </dictionary>
 </component>

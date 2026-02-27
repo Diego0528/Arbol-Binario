@@ -22,26 +22,45 @@ public class ArbolBinario {
         return actual;
     }
 
-    public void inOrden(Nodo actual){
+    public String preOrden(Nodo actual){
+        StringBuilder sb = new StringBuilder();
+        resolverPreOrden(actual, sb);
+        return sb.toString().trim();
+    }
+
+    private void resolverPreOrden(Nodo actual, StringBuilder sb){
         if (actual != null){
-            inOrden(actual.izquierdo);
-            System.out.println(actual.valor);
-            inOrden(actual.derecho);
+            sb.append(actual.valor).append(",");
+            resolverPreOrden(actual.izquierdo, sb);
+            resolverPreOrden(actual.derecho, sb);
         }
     }
 
-    public void preOrden(Nodo actual){
+    public String inOrden(Nodo actual){
+        StringBuilder sb = new StringBuilder();
+        resolverInOrden(actual, sb);
+        return sb.toString().trim();
+    }
+
+    private void resolverInOrden(Nodo actual, StringBuilder sb){
         if (actual != null){
-            System.out.println(actual.valor);
-            preOrden(actual.izquierdo);
-            preOrden(actual.derecho);
+            resolverInOrden(actual.izquierdo, sb);
+            sb.append(actual.valor).append(",");
+            resolverInOrden(actual.derecho, sb);
         }
     }
-    public void postOrden(Nodo actual){
+
+    public String postOrden(Nodo actual){
+        StringBuilder sb = new StringBuilder();
+        resolverPostOrden(actual, sb);
+        return sb.toString().trim();
+    }
+
+    private void resolverPostOrden(Nodo actual, StringBuilder sb){
         if (actual != null){
-            postOrden(actual.izquierdo);
-            postOrden(actual.derecho);
-            System.out.println(actual.valor);
+            resolverPostOrden(actual.izquierdo, sb);
+            resolverPostOrden(actual.derecho, sb);
+            sb.append(actual.valor).append(",");
         }
     }
 

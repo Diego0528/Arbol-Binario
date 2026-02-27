@@ -1,13 +1,13 @@
 package com.diego.arbolbinario.Controller;
 
 import com.diego.arbolbinario.Model.ArbolBinario;
-import com.diego.arbolbinario.Model.Nodo;
 import javafx.fxml.FXML;
 import javafx.scene.effect.GaussianBlur;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+
 
 public class MainController {
 
@@ -31,7 +31,7 @@ public class MainController {
     public void initialize() {
 
         GaussianBlur blur = new GaussianBlur();
-        blur.setRadius(10);
+        blur.setRadius(0);
 
         overlay.setEffect(blur);
     }
@@ -48,18 +48,20 @@ public class MainController {
 
     public void preOrden(MouseEvent mouseEvent) {
         System.out.println("PreOrden");
-        String r = arbol.preOrden(arbol.raiz);
-        txtResultado.setText(r);
+        String resultado = arbol.preOrden(arbol.raiz);
+        txtResultado.setText(resultado);
     }
 
     public void inOrden(MouseEvent mouseEvent) {
         System.out.println("InOrden");
-        arbol.inOrden(arbol.raiz);
+        String resultado = arbol.inOrden(arbol.raiz);
+        txtResultado.setText(resultado);
     }
 
     public void postOrden(MouseEvent mouseEvent) {
         System.out.println("PostOrden");
-        arbol.postOrden(arbol.raiz);
+        String resultado = arbol.postOrden(arbol.raiz);
+        txtResultado.setText(resultado);
     }
 
 
