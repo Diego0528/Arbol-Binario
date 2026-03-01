@@ -1,64 +1,61 @@
 .root {
-    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-background-color: #a2a2a2;
+    -fx-font-family: "Roboto";
+    -fx-padding: 25;
 }
 
-/* Fondo con imagen */
-.background {
-    -fx-background-image: url("../Imagenes/Fondo1.jpg");
-    -fx-background-size: cover;
-    -fx-background-position: center center;
+
+.container {
+    -fx-background-color: white;
+    -fx-padding: 20;
+    -fx-spacing: 20;
+    -fx-background-radius: 5;
+
+    -fx-effect: dropshadow(gaussian,
+    rgba(29,30,28,0.26),
+    15, 0.2, 6, 7);
+
+    -fx-max-width: 260;
 }
 
-/* Capa oscura encima del fondo */
-.overlay {
-    -fx-background-color: rgba(40, 40, 40, 0.55);
-}
-
-/* Contenedor central */
-.login-box {
-    -fx-alignment: center;
-    -fx-spacing: 15;
-}
-
-/* Logo circular */
-.logo {
-    -fx-border-color: white;
-    -fx-border-radius: 50%;
-    -fx-border-width: 2;
-    -fx-text-fill: white;
-    -fx-font-size: 26px;
-    -fx-alignment: center;
-    -fx-min-width: 80px;
-    -fx-min-height: 80px;
-}
-
-/* Inputs */
-.text-field, .password-field {
-    -fx-background-color: rgba(255,255,255,0.15);
-    -fx-background-radius: 20;
-    -fx-border-radius: 20;
-    -fx-text-fill: white;
-    -fx-prompt-text-fill: #dddddd;
-    -fx-padding: 10 15;
-    -fx-pref-width: 250;
-}
-
-/* Botón */
-.login-button {
-    -fx-background-color: linear-gradient(to right, #ff4b7d, #ff2e63);
-    -fx-background-radius: 20;
-    -fx-text-fill: white;
+/* Título */
+.title {
+    -fx-font-size: 20px;
     -fx-font-weight: bold;
-    -fx-pref-width: 250;
-    -fx-padding: 10;
 }
 
-.login-button:hover {
-    -fx-opacity: 0.85;
+
+.body {
+    -fx-padding: 10 20 10 20;
 }
 
-/* Texto inferior */
-.link {
-    -fx-text-fill: #cccccc;
-    -fx-font-size: 11px;
+/* Botones */
+.boton-estilo {
+    -fx-background-color: #dadad3;
+    -fx-border-color: black;
+    -fx-border-width: 2;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+
+    -fx-text-fill: black;
+    -fx-pref-height: 40;
+    -fx-pref-width: 200;
+
+    -fx-cursor: hand;
+}
+
+.boton-estilo:hover {
+    -fx-background-color: rgb(126,114,83);
+    -fx-text-fill: white;
+}
+
+.boton-estilo:pressed {
+    -fx-background-color: #114399;
+    -fx-text-fill: white;
+}
+
+.imgArbol{
+    -fx-background-image: url("../Imagenes/Arbol.png");
+    -fx-background-size: cover;
+    -fx-padding: 0;
 }
