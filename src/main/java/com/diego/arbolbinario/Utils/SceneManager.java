@@ -35,4 +35,8 @@ public class SceneManager {
             e.printStackTrace();
         }
     }
+
+    public static Stage getStagePrincipal() {
+        return stagePrincipal;
+    }
 }

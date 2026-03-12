@@ -1,5 +1,6 @@
 package com.diego.arbolbinario.Application;
 
+import com.diego.arbolbinario.Controller.BinarioController;
 import com.diego.arbolbinario.Utils.Paths;
 import com.diego.arbolbinario.Utils.SceneManager;
 import javafx.application.Application;

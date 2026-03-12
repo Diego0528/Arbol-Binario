@@ -6,26 +6,36 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../Styles/Theme.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.diego.arbolbinario.Controller.BinarioController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="800.0" styleClass="root" stylesheets="@../Styles/Theme.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.diego.arbolbinario.Controller.BinarioController">
     <children>
-        <Pane fx:id="overlay" prefHeight="400.0" prefWidth="600.0" styleClass="background" />
 
-        <Pane prefHeight="400.0" prefWidth="600.0" styleClass="overlay">
+        <Pane fx:id="overlay" prefHeight="540.0" prefWidth="800.0" />
+
+        <Pane fx:id="contenedor" prefHeight="540.0" prefWidth="800.0">
             <children>
+                <VBox layoutX="15.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" styleClass="container">
+                    <TextField fx:id="txtNodo" promptText="Nodo" styleClass="tree-node-label" />
+                    <Button fx:id="btnIngresar" onMouseClicked="#ingNodo" styleClass="boton-estilo" text="Ingresar Nodo" />
+                    <TextField fx:id="txtBuscar" promptText="Buscar nodo" styleClass="tree-node-label" />
+                    <Button fx:id="btnBuscar" onMouseClicked="#buscarNodo" styleClass="boton-estilo" text="Buscar Nodo" />
+                    <TextField fx:id="txtEliminar" promptText="Eliminar nodo" styleClass="tree-node-label" />
+                    <Button fx:id="btnEliminar" onMouseClicked="#eliminarNodo" styleClass="boton-estilo" text="Eliminar Nodo" />
 
-                <VBox layoutX="39.0" layoutY="32.0" prefHeight="333.0" prefWidth="173.0" styleClass="login-box">
+                          <TextField fx:id="txtResultado" promptText="Resultado:" styleClass="tree-node-label" />
 
-                    <TextField fx:id="txtNodo" promptText="Nodo" />
-
-                    <Button fx:id="btnIngresar" onMouseClicked="#ingNodo" styleClass="login-button" text="Ingresar Nodo" />
-                    <TextField fx:id="txtNodo1" />
-                    <Button fx:id="btnPreOrden" onMouseClicked="#preOrden" styleClass="login-button" text="PreOrden" />
-                    <Button fx:id="btnInOrden" onMouseClicked="#inOrden" styleClass="login-button" text="InOrden" />
-                    <Button fx:id="btnPostOrden" onMouseClicked="#postOrden" styleClass="login-button" text="PostOrden" />
+                          <Button fx:id="btnPreOrden" onMouseClicked="#preOrden" styleClass="boton-estilo" text="PreOrden" />
+                    <Button fx:id="btnInOrden" onMouseClicked="#inOrden" styleClass="boton-estilo" text="InOrden" />
+                    <Button fx:id="btnPostOrden" onMouseClicked="#postOrden" styleClass="boton-estilo" text="PostOrden" />
+                    <Button fx:id="btnCargar" mnemonicParsing="false" onMouseClicked="#cargarArchivo" prefHeight="25.0" prefWidth="74.0" styleClass="boton-estilo" text="Cargar TXT" />
+                    <Button fx:id="btnGuardar" mnemonicParsing="false" onMouseClicked="#guardarArchivo" prefHeight="25.0" prefWidth="74.0" styleClass="boton-estilo" text="Guardar TXT" />
 
                 </VBox>
-                <TextField fx:id="txtResultado" layoutX="287.0" layoutY="305.0" promptText="Resultado:" />
+
+
+                <Pane fx:id="treePane" layoutX="220.0" layoutY="10.0" prefHeight="520.0" prefWidth="566.0" />
+
             </children>
         </Pane>
+
     </children>
 </AnchorPane>

@@ -2,7 +2,9 @@
   <dictionary name="project">
     <words>
       <w>arbol</w>
+      <w>arbolbinario</w>
       <w>binario</w>
+      <w>contenedor</w>
       <w>eliminar</w>
       <w>encontrar</w>
       <w>insertar</w>

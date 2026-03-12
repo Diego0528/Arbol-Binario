@@ -54,8 +54,40 @@
     -fx-text-fill: white;
 }
 
+
 .imgArbol{
     -fx-background-image: url("../Imagenes/Arbol.png");
     -fx-background-size: cover;
     -fx-padding: 0;
+}
+
+/* Nodo del árbol */
+.tree-node-circle {
+    -fx-background-color: #dadad3;
+    -fx-border-color: black;
+    -fx-border-width: 2;
+    -fx-border-radius: 50;
+    -fx-background-radius: 50;
+    -fx-min-width: 40;
+    -fx-min-height: 40;
+    -fx-max-width: 40;
+    -fx-max-height: 40;
+    -fx-alignment: center;
+}
+
+.tree-node-label {
+    -fx-font-family: "Roboto";
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-text-fill: black;
+}
+
+/* Animación de brillo al recorrer */
+.tree-node-highlight {
+    -fx-background-color: rgb(126,114,83);
+    -fx-border-color: #114399;
+    -fx-border-width: 3;
+    -fx-border-radius: 50;
+    -fx-background-radius: 50;
+    -fx-effect: dropshadow(gaussian, rgba(17,67,153,0.85), 18, 0.6, 0, 0);
 }

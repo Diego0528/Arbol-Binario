@@ -1,4 +1,6 @@
 package com.diego.arbolbinario.Controller;
+import com.diego.arbolbinario.Utils.Paths;
+import com.diego.arbolbinario.Utils.SceneManager;
 import javafx.scene.layout.Pane;
 import javafx.fxml.Initializable;
 
@@ -18,7 +20,7 @@ public class MainController implements Initializable {
 
     public void goBinary() {
         System.out.println("Ir a Binary Tree");
-        // cargar vista binary
+        SceneManager.cambiarEscena(Paths.BinarioView);
     }
 
     public void goAVL() {
